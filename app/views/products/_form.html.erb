@@ -19,6 +19,14 @@
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div>
+    <%= f.label :category %><br>
+    <%= f.select :category_id, Category.all.collect {|c| [c.name, c.id]},include_blank: true%>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
