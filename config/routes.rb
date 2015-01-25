@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :administrators
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :partners
   resources :products, only: [:show, :index]
 
